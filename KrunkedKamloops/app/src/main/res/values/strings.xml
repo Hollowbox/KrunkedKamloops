@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Krunked Kamloops</string>
+    <string name="btn_text_list">List</string>
+    <string name="btn_text_map">Map</string>
+    <string name="name_of_drink">Martini</string>
+    <string name="price_of_drink">$10</string>
+    <string-array name="restaurant_names">
+        <item>Ye Olde Pub</item>
+        <item>Moe\'s Tavern</item>
+        <item>Cheers</item>
+    </string-array>
+    <string-array name="restaurant_locations">
+        <item>123 Fake St.</item>
+        <item>222 Walnut St.</item>
+        <item>84 Beacon St.</item>
+    </string-array>
 </resources>
