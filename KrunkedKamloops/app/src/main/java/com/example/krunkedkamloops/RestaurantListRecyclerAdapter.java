@@ -1,6 +1,7 @@
 package com.example.krunkedkamloops;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,10 +11,11 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class RestaurantListRecyclerAdapter extends RecyclerView.Adapter<RestaurantListRecyclerAdapter.ViewHolder> { // the generic is the ViewHolder that will be shown in the recycler view
     private static final String TAG = "RestaurantListRecyclerAdapter";
@@ -46,6 +48,7 @@ public class RestaurantListRecyclerAdapter extends RecyclerView.Adapter<Restaura
             public void onClick(View view){ // stuff to do when pub name text is clicked
                 Log.d(TAG, "onClick: clicked on: " + mPubNames.get(position)); // in logcat
                 Toast.makeText(mContext, mPubNames.get(position), Toast.LENGTH_SHORT).show(); // on screen
+                onNameTextClick(position);
             }
         });
 
@@ -73,7 +76,14 @@ public class RestaurantListRecyclerAdapter extends RecyclerView.Adapter<Restaura
             super(itemView);
             pubNameText = itemView.findViewById(R.id.pubNameText);
             pubLocText = itemView.findViewById(R.id.pubLocationText);
-            parentLayout = itemView.findViewById(R.id.parentLayout);
+            parentLayout = itemView.findViewById(R.id.restaurant_Layout);
         }
+    }
+
+    public void onNameTextClick(int position){
+        Intent intent = new Intent(mContext,RestaurantDetailsActivity.class);
+        String pubName = mPubNames.get(position);
+        Log.d(TAG, "onNameTextClick: clicked on: " + pubName); // in logcat
+        mContext.startActivity(intent);
     }
 }
