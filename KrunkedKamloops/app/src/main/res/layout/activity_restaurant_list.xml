@@ -10,7 +10,7 @@
         android:id="@+id/restaurantListRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/restaurantList_guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +18,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/restaurantList_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -27,18 +27,18 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/cheapestDrinkName"
+        android:id="@+id/restaurant_CheapestDrinkName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/name_of_drink"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintEnd_toStartOf="@+id/restaurantList_VertGuideline2"
+        app:layout_constraintStart_toStartOf="@+id/restaurantList_VertGuideline1"
+        app:layout_constraintTop_toTopOf="@+id/restaurantList_guideline" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
+        android:id="@+id/restaurantList_VertGuideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -47,31 +47,31 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
+        android:id="@+id/restaurantList_VertGuideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.8" />
 
     <TextView
-        android:id="@+id/cheapestDrinkCost"
+        android:id="@+id/restaurantList_CheapestDrinkCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/price_of_drink"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintStart_toStartOf="@+id/restaurantList_VertGuideline2"
+        app:layout_constraintTop_toTopOf="@+id/restaurantList_guideline" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/restaurantList_CheapestDrinkImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/restaurantList_VertGuideline1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/restaurantList_guideline"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/martini" />
 </androidx.constraintlayout.widget.ConstraintLayout>
